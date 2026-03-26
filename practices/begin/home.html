@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .navbar {
+            display: flex;
+            justify-content:space-around;
+            height: 40px;
+            background-image: url("img/chefs-bg.jpg");
+            border-bottom: 1px solid #ddd;
+        }
+        .company_name {
+            font-size: 16px;
+        }
+        .logo{
+            width: 25px;
+            height: 25px;
+        }
+        .navgroup_left {
+            display: flex;
+            gap:20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .navgroup_right button {
+            margin: auto;
+            height: 30px;
+            width: auto;
+            background: transparent;
+            border-radius: 10px;
+            cursor: pointer;
+            border-color: aliceblue;
+        }
+        .navgroup_right {
+            display: flex;
+            gap:20px
+        }
+        .subnav {
+            display: flex;
+            background-color: rgb(240, 250, 240);
+            justify-content:space-around;
+            border-bottom: 1px solid #ddd;
+            font-family: Arial;
+            height: 20px;
+            align-items: center;
+            
+        }
+        .subnav_group {
+            display: flex;
+            gap:20px;
+            list-style: none;
+            font-size: 12px;
+        }
+        main {
+            background-image: url(img/gallery/gallery-1.jpg);
+        }
+       .footer {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(240, 240, 250);
+            border-top-color: #ddd;
+            font-family: Arial;
+            font-size: 12px;
+            
+
+        }
+        .footer ul {
+            justify-content: center;
+            display: flex;
+            gap:20px;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="navgroup_left">
+                <img class="logo" src="img/apple-touch-icon.png" alt="apple-touch-icon">
+                <p class="company_name">My company</p>
+            </div>
+            <div class="navgroup_right">
+                <button>Signin</button>
+                <button>Signup</button>
+            </div>
+        </div>
+        <div class="subnav">
+            <ul class="subnav_group">
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Service</li>
+                <li>News</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <img  src="img/gallery/gallery-1.jpg" alt="slide-1">
+    </main>
+
+    <footer class="footer">
+            <ul>
+                <li>About</li>
+                <li>Products</li>
+                <li>Support</li>
+                <li>Social</li>
+                <li>New Arrivals</li>
+                <li>FAQ</li>
+                <li>Newsletter Box</li>
+                <li>Mission Statement</li>
+                <li>Best Sellers</li>
+                <li>Shipping Policy</li>
+            </ul>
+    </footer>
+</body>
+</html>

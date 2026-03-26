@@ -1,0 +1,29 @@
+/* Mobile Menu */ 
+ 
+@media  (max-width: 768px) { 
+  .hamburger_class { 
+    display: block; 
+  } 
+ 
+  .menu_class { 
+    position: absolute; 
+    top: 60px; 
+    left: 0; 
+    width: 100%; 
+    background: #444; 
+ 
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.4s ease; 
+  } 
+ 
+  .menu_class ul { 
+    flex-direction: column; 
+    text-align: center; 
+    padding: 10px 0; 
+  } 
+ 
+  .menu_class.active { 
+    max-height: 300px; 
+  } 
+}

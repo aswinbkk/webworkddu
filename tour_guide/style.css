@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display:flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.nav_menu{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav_right img{
+    width: 100%;
+}
+
+.nav_right{
+    width: 20px;
+}
+
+.slider_div img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.slider_div{
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.slider_text{
+    padding: 20px;
+    position: absolute;
+    top: 100px;
+    color: aliceblue;
+    font-size: 50px;
+}
+
+.book_now{
+    margin: 20px;
+    position: absolute;
+    top: 46vh;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    height: 30px;
+    width: 100px;
+    
+}
+
+.intro_text{
+    text-align: center;
+    margin: 20px;
+}
+
+.service_menu{
+    display: flex;
+    justify-content: space-around;
+    height: fit-content;
+    /* width: 800px; */
+}
+
+.menu_div img{
+    width: 40%;
+}
+
+.menu_div{
+    text-align: center;
+    padding: 10px;
+    width: 100px;
+}
+
+.section_hed{
+    text-align: center;
+    padding: 10px;
+}
+
+.card_top img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card_top{
+    width: 180px;
+    position: relative;
+}
+
+.card_top button{
+    position: absolute;
+    background-color: rgba(240, 248, 255, 0.424);
+    border-radius: 10px;
+    height: 20px;
+    width: 30px;
+    right: 15px;
+    top: 15px;
+    color: black
+}
+
+.img_div img{
+    width: 100%;
+   /* background-color: aqua; */
+}
+
+.img_div{
+    left: 20px;
+    /* background-color: #850505;
+    width: 50%; */
+    /* align-items: center; */
+ width: 30px;
+  /* background-color: rgb(56, 239, 0); */
+ 
+}
+/* .img_div img{
+    width: 50px;
+    height: 50px;
+} */
+
+.card_bottom{
+    display: flex;
+    align-items: center;
+     background-color: rgb(48, 0, 191);
+    justify-content: space-between;
+    align-items: center;
+  
+}
+.card_bottom_section{
+text-align: start;
+
+}
+.tour_plan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* width: 180px; */
+    border: 1px solid rgba(46, 46, 46, 0.53);
+    border-radius: 10px;
+}
+
+.card_section{
+    /* height: fit-content; */
+    /* width: 900px; */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+.card{
+    display: flex;
+    justify-content: space-around;
+}
+img{
+    left: 20px;
+}

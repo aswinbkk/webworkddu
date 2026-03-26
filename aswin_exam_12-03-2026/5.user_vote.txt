@@ -1,0 +1,9 @@
+let age=17;
+
+if (age>=18)
+{
+    console.log("Age is "+age+ " user can vote");
+}
+else{
+     console.log("Age is "+age+ " user can't vote");
+}

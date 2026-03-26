@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main_containe{
+            margin: auto;
+            max-width: 1024px;
+        }
+        .grid_container{
+            display: grid; grid-template-columns: repeat(3,1fr); gap: 5%;
+        }
+        @media (max-width: 1024px) {
+        .grid_container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        }
+        }
+        @media (max-width: 768px) {
+        .grid_container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        }
+        }
+        @media (max-width: 320px) {
+        .grid_container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="main_containe">
+        <div class="grid_container">
+            <div style="width: 200px;">
+                <img src="/home_1.jpg" style="width: 100%;">
+            </div>
+            <div style="width: 200px;">
+                <img src="/home_1.jpg" style="width: 100%;">
+            </div>
+            <div style="width: 200px;">
+                <img src="/home_1.jpg" style="width: 100%;">
+            </div>
+            <div style="width: 200px;">
+                <img src="/home_1.jpg" style="width: 100%;">
+            </div>
+            <div style="width: 200px;">
+                <img src="/home_1.jpg" style="width: 100%;">
+            </div>
+            <div style="width: 200px;">
+                <img src="/home_1.jpg" style="width: 100%;">
+            </div>
+        </div>
+    </div>
+        
+</body>
+</html>

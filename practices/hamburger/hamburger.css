@@ -1,0 +1,52 @@
+section { 
+  display: flex; 
+  justify-content: end;
+  align-items: center; 
+  padding: 15px; 
+  background: #333; 
+  color: white; 
+  position: relative; 
+} 
+ 
+.menu_class ul { 
+  list-style: none; 
+  display: flex; 
+  gap: 20px; 
+} 
+.menu_class { 
+  z-index: 10; 
+} 
+.menu_class a { 
+  color: white; 
+  text-decoration: none; 
+} 
+ 
+/* Hamburger */ 
+ 
+.hamburger_class { 
+  width: 30px; 
+  cursor: pointer; 
+  display: none; 
+} 
+ 
+.hamburger_class span { 
+  display: block; 
+  height: 3px; 
+  background: white; 
+  margin: 6px 0; 
+  transition: 0.3s; 
+} 
+ 
+/* Animation */ 
+ 
+.hamburger_class.active span:nth-child(1) { 
+  transform: rotate(45deg) translate(5px, 5px); 
+} 
+ 
+.hamburger_class.active span:nth-child(2) { 
+  opacity: 0; 
+} 
+ 
+.hamburger_class.active span:nth-child(3) { 
+  transform: rotate(-45deg) translate(7px, -6px); 
+} 

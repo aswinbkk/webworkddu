@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cover_img{
+            background-image: url(home_1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 80vh;
+        }
+
+        h3{
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-size: 2rem;
+        }
+
+        p{
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-size: 1.5rem;
+        }
+        button{
+            border-radius: 10px;
+            padding: 1%;
+            margin-left: 50em;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="cover_img">
+        <div class="content">
+            <h3>Title</h3>
+            <p>paragraphparagraphparagraphparagraph
+                paragraphparagraphparagraphparagraph
+                paragraphparagraphparagraphparagraph
+            </p>
+            <button>Button</button>
+        </div>
+    </div>
+</body>
+</html>

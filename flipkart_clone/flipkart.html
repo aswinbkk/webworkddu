@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<title>Flipkart</title>
+
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			font-family: 'Inter', Arial, sans-serif;
+		}
+		
+		nav {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			background-color: #ffffff;
+			padding: 10px 20px;
+			color: rgb(29, 28, 28);
+			border-bottom: 1px solid rgba(80, 74, 74, 0.678);
+		}
+		.nav_sec2 {
+			display: flex;
+		} 
+		.nav_sec3 ul {
+			list-style: none;
+			display: flex;
+			gap: 10px;
+		}
+		.nav_sec3 li {
+			display: flex;
+			justify-content: center;
+		}
+		.down_icon{
+			width: 10px;
+		}
+		.profile_icon, .cart_icon {
+			width: 20px;
+		}
+		.search_container {
+			display: flex;
+			justify-content: center;
+			
+			border: 2px solid cornflowerblue;
+			border-radius: 10px;
+			align-items: center;
+		}
+		.search_container input {
+			width: 390px;
+			padding: 8px 12px;
+			border: none;
+			outline: none;
+			border-radius: 10px;
+		}
+		.search_container .search_icon {
+			
+			width: 20px;
+			height: 20px;
+		}
+		.container{
+			max-width: 1300px;
+		}
+		.slider {
+			display: flex;
+			gap: 20px;
+			justify-content: center;
+			padding: 20px;
+		}
+		.slider img{
+			width: 500px;
+		}
+		.menu {
+			display: grid;
+			grid-template-columns: repeat(6,2fr);
+			border: 1px solid rgba(80, 74, 74, 0.678);
+			border-radius: 10px;
+			padding: 10px;
+			margin: 20px;
+		}
+		.menu div{
+			text-align: center;
+			font-size: small;
+		}
+		.submenu {
+			padding: 10px;
+		}
+		.testimonials{
+			display: grid;
+			grid-template-columns: repeat(2,2fr);
+			border: 1px solid rgba(80, 74, 74, 0.678);
+			border-radius: 10px;
+			padding: 10px;
+			margin: 20px;
+		}
+		
+		.main_div{
+			background-color: rgba(226, 226, 226, 0.701);
+			border-radius: 10px;
+			padding: 10px;
+			margin: 10px;
+			display: flex;
+		}
+
+		.main_div img{ 
+			width: 70px;
+		}
+
+		.review_div {
+			padding-left: 10px;
+			text-align: justify;
+		}
+		.review_name{
+			text-align-last: right;
+			font-style: italic;
+			font-size: 14px;
+		}
+		.review_text{
+			font-size: 12px;
+			font-style: inherit;
+		}
+
+	</style>
+</head>
+
+<body>
+	<nav>
+		<div class="nav_sec1">
+			<img src="img/fk_side_icon.svg" alt="flipkart_icon">
+		</div>
+
+		<div class="nav_sec2">
+			<form class="search_container">
+				<img src="img/search_icon.png" class="search_icon">
+				<input type="text" placeholder="Search...">
+			</form>
+		</div>
+		
+		<div class="nav_sec3">
+			<ul>
+				<li><img src="img/profile_icon.svg" class="profile_icon"> Login<img src="img/down_icon.svg" class="down_icon"></li>
+				<li>More<img src="img/down_icon.svg" class="down_icon"></li>
+				<li><img src="img/cart_icon.svg" class="cart_icon"> Cart</li>
+			</ul>
+		</div>
+	</nav>
+	
+	<main>
+		<div class="slider">
+			<img src="img/main/slider1.webp">
+			<img src="img/main/slider2.webp">
+		</div>
+		<div class="menu">
+			<div class="submenu">
+				<img src="img/menu/appliances.webp">
+				<p>Appliances</p>
+			</div>
+			<div class="submenu">
+				<img src="img/menu/autoacc.webp">
+				<p>Auto & Acc</p>
+			</div>
+			<div class="submenu">
+				<img src="img/menu/beauty.webp">
+				<p>Beauty</p>
+			</div>
+			<div class="submenu">
+				<img src="img/menu/electronics.webp">
+				<p>Electronics</p>
+			</div>
+			<div class="submenu">
+				<img src="img/menu/fashion.webp">
+				<p>Fashion</p>
+			</div>
+			<div class="submenu">
+				<img src="img/menu/food&health.webp">
+				<p>Food & Health</p>
+			</div>
+			<div class="submenu">
+				<img src="img/menu/furniture.webp">
+				<p>Furniture</p>
+			</div>
+			<div class="submenu">
+				<img src="img/menu/genz.webp">
+				<p>GenZ</p>
+			</div>
+			<div class="submenu">
+				<img src="img/menu/grocery.webp">
+				<p>Grocery</p>
+			</div>
+			<div class="submenu">
+				<img src="img/menu/home&kitchen.webp">
+				<p>Home & Kitchen</p>
+			</div>
+			<div class="submenu">
+				<img src="img/menu/mobile.webp">
+				<p>Mobile</p>
+			</div>
+			<div class="submenu">
+				<img src="img/menu/sports.webp">
+				<p>Sports</p>
+			</div>
+		</div>
+		<div class="testimonials">
+			<div class="main_div">
+				<img src="img/testimonials/testimonials-1.jpg">
+				<div class="review_div">
+					<p class="review_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem sequi, tempore voluptatum nisi esse velit! Vel, deserunt! Blanditiis fuga itaque adipisci voluptates, laudantium voluptatibus quis quae possimus animi cumque nostrum.</p>
+					<p class="review_name">Jhon</p>
+				</div>
+			</div>
+			<div class="main_div">
+				<img src="img/testimonials/testimonials-2.jpg">
+				<div class="review_div">
+					<p class="review_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem sequi, tempore voluptatum nisi esse velit! Vel, deserunt! Blanditiis fuga itaque adipisci voluptates, laudantium voluptatibus quis quae possimus animi cumque nostrum.</p>
+					<p class="review_name">Jhon</p>
+				</div>
+			</div>
+			<div class="main_div">
+				<img src="img/testimonials/testimonials-3.jpg">
+				<div class="review_div">
+					<p class="review_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem sequi, tempore voluptatum nisi esse velit! Vel, deserunt! Blanditiis fuga itaque adipisci voluptates, laudantium voluptatibus quis quae possimus animi cumque nostrum.</p>
+					<p class="review_name">Jhon</p>
+				</div>
+			</div>
+			<div class="main_div">
+				<img src="img/testimonials/testimonials-4.jpg">
+				<div class="review_div">
+					<p class="review_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem sequi, tempore voluptatum nisi esse velit! Vel, deserunt! Blanditiis fuga itaque adipisci voluptates, laudantium voluptatibus quis quae possimus animi cumque nostrum.</p>
+					<p class="review_name">Jhon</p>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

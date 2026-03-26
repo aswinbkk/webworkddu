@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list{
+            display: flex; list-style: none; gap: 20px; justify-content: center;
+        }
+        .list li:hover{
+            color: aliceblue;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="list">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Services</li>
+        </ul>
+    </nav>
+</body>
+</html>

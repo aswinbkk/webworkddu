@@ -1,0 +1,394 @@
+#####index.html#####
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find eco-friendly homes and real estate opportunities with Earth.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <title>Earth | Eco-Friendly Real Estate</title>
+</head>
+<body>
+    <div class="main_container">
+        <header class="cover_img">
+            <nav class="nav_bar">
+                <div class="nav_left">
+                    <p>Earth</p>
+                </div>
+                <div class="nav_center">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Store</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="nav_right">
+                    <div class="nav_right_search_icon">
+                        <img src="./img/search_icon.png" alt="Search">
+                    </div>
+                    <div class="vertical_line"><hr></div>
+                    <div class="nav_right_contact_button">
+                        <button type="button">
+                            <div class="nav_right_contact_icon">
+                                <img src="./img/contact_icon.png" alt="Contact">
+                            </div>
+                            <span class="nav_right_contact_text">Contact us</span>
+                        </button>
+                    </div>        
+                </div>
+            </nav>
+
+            <section class="hero_content">
+                <div class="cover_text">
+                    <h1>Find Eco-Friendly<br>Homes Easily</h1>
+                </div>
+                <div class="cover_button">
+                    <button type="button">Know More</button>
+                </div>
+            </section>
+        </header>
+
+        <main>
+            <section class="search_container_center">
+                <div class="search_container_main">
+                    <form class="search_container">
+                        <input class="search_box" type="text" placeholder="Location">
+                        <div class="search_vertical_line"><hr></div>
+                        <input class="search_box" type="text" placeholder="Property Type">
+                        <div class="search_container_img">
+                            <img src="./img/search_icon.png" alt="Submit Search">
+                            <img src="./img/profile_icon.png" alt="User Profile">
+                        </div>
+                    </form>
+                    <div class="search_right_contact_button">
+                        <button type="button">Contact us</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page_center_container">
+                <article class="page_center">
+                    <div class="home_1">
+                        <img src="./img/home_1.jpg" alt="Beautiful eco-friendly home exterior">
+                    </div>
+                    <div class="home_text">
+                        <h3>Welcome to Your Next Chapter in Real Estate</h3>
+                        <p>We’re delighted to have you here! Whether you’re searching for your dream home, exploring investment opportunities, or planning to sell your property, our mission is to make your journey smooth, informed, and rewarding.</p>
+                        <p>With a passion for real estate and a commitment to personalized service, we bring you the latest listings, market insights, and expert guidance every step of the way.</p>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+    <!-- <script src="./script.js"></script> -->
+</body>
+</html>
+
+#####style.css#####
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-green: rgb(94 151 47 / 97%);
+    --dark-green: rgb(64 102 32 / 94%);
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.main_container {
+    max-width: 1530px;
+    margin: auto;
+}
+
+
+.nav_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0 0 20px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav_left {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-green);
+}
+
+.nav_center ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.nav_right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav_right_search_icon img {
+    width: 20px;
+}
+
+.vertical_line hr {
+    border: none;
+    height: 30px;
+    width: 1px;
+    background-color: #ccc;
+}
+
+.nav_right_contact_button button {
+    display: flex;
+    align-items: center;
+    padding: 8px 20px;
+    gap: 10px;
+    border: none;
+    background-color: var(--primary-green);
+    border-radius: 25px;
+    color: var(--white);
+}
+
+.nav_right_contact_icon img {
+    width: 18px;
+    filter: brightness(0) invert(1);
+}
+
+
+.cover_img {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("./img/cover_img.jpg") center/cover no-repeat;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero_content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+}
+
+.cover_text h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem); 
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+}
+
+.cover_button {
+    margin-top: 30px;
+}
+
+.cover_button button {
+    border: 2px solid var(--white);
+    border-radius: 25px;
+    color: var(--white);
+    background-color: var(--primary-green);
+    padding: 12px 30px;
+    font-size: 1rem;
+}
+
+
+.search_container_center {
+    display: flex;
+    justify-content: center;
+    margin-top: -50px; 
+}
+
+.search_container_main {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 90%;
+    max-width: 1000px;
+    background-color: var(--dark-green);
+    padding: 20px;
+    border-radius: 60px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.search_container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    background-color: var(--white);
+    padding: 10px 25px;
+    border-radius: 40px;
+}
+
+.search_box {
+    border: none;
+    outline: none;
+    width: 75%;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+.search_vertical_line hr {
+    border: none;
+    height: 20px;
+    width: 1px;
+    background-color: #ddd;
+    margin: 0 10px;
+}
+
+.search_container_img {
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.search_container_img img {
+    width: 20px;
+    cursor: pointer;
+}
+
+.search_right_contact_button button {
+    padding: 15px 30px;
+    border: none;
+    background-color: var(--primary-green);
+    color: var(--white);
+    border-radius: 40px;
+    font-weight: 600;
+}
+
+
+.page_center_container {
+    padding: 80px 5%;
+}
+
+.page_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap; 
+}
+
+.home_1 {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.home_1 img {
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    border: 12px solid var(--white);
+}
+
+.home_text {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.home_text h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.home_text p {
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+#####responsive#####
+
+@media (max-width: 992px) {
+    .nav_center {
+        display: none; 
+    }
+
+    .hero_content {
+        padding-left: 5%;
+        text-align: center;
+    }
+
+    .page_center {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .home_text {
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .search_container_main {
+        flex-direction: column;
+        border-radius: 20px;
+        margin-top: -30px;
+    }
+
+    .search_container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .search_vertical_line {
+        display: none;
+    }
+
+    .search_right_contact_button {
+        width: 100%;
+    }
+
+    .search_right_contact_button button {
+        width: 100%;
+    }
+
+    .cover_text h1 {
+        font-size: 2.2rem;
+    }
+
+    .nav_bar {
+        padding: 10px 20px;
+    }
+    
+    .nav_right_contact_text {
+        display: none; 
+    }
+}
+
+expain the code line by line
