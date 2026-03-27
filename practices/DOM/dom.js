@@ -14,8 +14,8 @@ generateBtn.addEventListener('click', () => {
     const info = infoInput.value.trim();
 
 
-    if (!imgUrl || !name || !occupation) {
-        alert("Please fill in all required fields (Image URL, Name, Occupation).");
+    if (!imgUrl || !name || !occupation || !info) {
+        alert("Please fill in all required fields (Image URL, Name, Occupation, Description).");
         return;
     }
 
@@ -26,9 +26,6 @@ generateBtn.addEventListener('click', () => {
     const img = document.createElement('img');
     img.src = imgUrl;
     img.alt = name;
-    img.onerror = () => {
-        img.src = 'https://via.placeholder.com/300x200?text=Image+Not+Found';
-    };
 
     const title = document.createElement('h2');
     title.textContent = name;
@@ -37,7 +34,7 @@ generateBtn.addEventListener('click', () => {
     job.textContent = occupation;
 
     const description = document.createElement('p');
-    description.textContent = info || "No description provided.";
+    description.textContent = info;
 
 
     card.appendChild(img);
