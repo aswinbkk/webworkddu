@@ -1,28 +1,25 @@
-// Get DOM elements
-const imgUrlInput = document.getElementById('imgUrl');
-const nameInput = document.getElementById('name');
-const occupationInput = document.getElementById('occupation');
-const infoInput = document.getElementById('info');
-const generateBtn = document.getElementById('generateBtn');
-const cardContainer = document.getElementById('cardContainer');
 
-// Event listener for button click
+const imgUrlInput = document.getElementById('img_url');
+const nameInput = document.getElementById('user_name');
+const occupationInput = document.getElementById('job_title');
+const infoInput = document.getElementById('job_info');
+const generateBtn = document.getElementById('generate_btn');
+const cardContainer = document.getElementById('card_container');
+
+
 generateBtn.addEventListener('click', () => {
     const imgUrl = imgUrlInput.value.trim();
     const name = nameInput.value.trim();
     const occupation = occupationInput.value.trim();
     const info = infoInput.value.trim();
 
-    // Input validation
+
     if (!imgUrl || !name || !occupation) {
         alert("Please fill in all required fields (Image URL, Name, Occupation).");
         return;
     }
 
-    // Clear previous card
-    cardContainer.innerHTML = '';
 
-    // Create card elements
     const card = document.createElement('div');
     card.classList.add('card');
 
@@ -42,12 +39,11 @@ generateBtn.addEventListener('click', () => {
     const description = document.createElement('p');
     description.textContent = info || "No description provided.";
 
-    // Append elements to card
+
     card.appendChild(img);
     card.appendChild(title);
     card.appendChild(job);
     card.appendChild(description);
 
-    // Append card to container
     cardContainer.appendChild(card);
 });

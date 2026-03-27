@@ -4,62 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Card Generator</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #f4f4f4;
-        padding: 20px;
-    }
-    .form-container {
-        background: #fff;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        max-width: 400px;
-        margin: auto;
-    }
-    input, textarea, button {
-        width: 100%;
-        padding: 8px;
-        margin: 6px 0;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-    .card {
-        background: #fff;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        overflow: hidden;
-        max-width: 300px;
-        margin: 20px auto;
-        text-align: center;
-    }
-    .card img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-    }
-    .card h2 {
-        margin: 10px 0 5px;
-    }
-    .card p {
-        padding: 0 10px 10px;
-        color: #555;
-    }
-</style>
+<link rel="stylesheet" href="dom.css">
 </head>
 <body>
 
 <div class="form-container">
-    <h2>Create Your Card</h2>
-    <input type="text" id="imgUrl" placeholder="Image URL" required>
-    <input type="text" id="name" placeholder="Name" required>
-    <input type="text" id="occupation" placeholder="Occupation" required>
-    <textarea id="info" placeholder="Short description" rows="3"></textarea>
-    <button id="generateBtn">Generate Card</button>
+    <h2>Generate Card</h2>
+    <input type="text" id="img_url" placeholder="Image URL" required>
+    <input type="text" id="user_name" placeholder="Name" required>
+    <input type="text" id="job_title" placeholder="Occupation" required>
+    <textarea id="job_info" placeholder="Short description" rows="3"></textarea>
+    <button id="generate_btn">Generate Card</button>
 </div>
 
-<div id="cardContainer"></div>
+<div id="card_container"></div>
 
 <script src="dom.js"></script>
 </body>
