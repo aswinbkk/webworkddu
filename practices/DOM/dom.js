@@ -1,4 +1,3 @@
-
 const imgUrlInput = document.getElementById('img_url');
 const userNameInput = document.getElementById('user_name');
 const jobTitleInput = document.getElementById('job_title');
