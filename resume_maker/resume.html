@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume Generator</title>
+<link rel="stylesheet" href="resume.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Generate Resume</h2>
+    <input type="text" id="full_name" placeholder="Full name" required>
+    <input type="text" id="mob_num" placeholder="Mobile number" required>
+    <input type="text" id="email" placeholder="Email ID" required>
+    <input type="text" id="linkedin" placeholder="LinkedIn ID" required>
+    <input type="text" id="address" placeholder="Home Town Address" required>
+    <textarea id="objective" placeholder="Short description(objective)" rows="3"></textarea>
+    <button id="generate_btn">Generate Resume</button>
+</div>
+<br>
+<br>
+<div id="card_container"></div>
+
+<script src="resume.js"></script>
+</body>
+</html>

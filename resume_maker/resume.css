@@ -1,0 +1,57 @@
+body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        padding: 20px;
+    }
+    .form-container {
+        background: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        max-width: 400px;
+        margin: auto;
+    }
+    input, textarea, button {
+        width: 98%;
+        height: 30px;
+        margin: 6px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 5px;
+    }
+    textarea{
+        height: 60px;
+    }
+    input::placeholder, textarea::placeholder{
+        color: rgba(133, 50, 11, 0.568);
+    }
+    .intro {
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        max-width: 1240px;
+        max-height: 1758px;
+        margin: auto;
+        padding: 48px;
+        text-align: center;
+        line-height: 0;
+    }
+
+    .mob_mail {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .linkedin_address {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .intro p {
+        padding: 0 10px 10px;
+        color: #555;
+        text-align: justify;
+    }
+    
