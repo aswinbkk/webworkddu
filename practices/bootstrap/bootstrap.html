@@ -10,8 +10,17 @@
   <style>
     .form-box {
       background-color: rgba(186, 186, 255, 0.637);
-      max-width: 900px;
+      max-width: 1100px;
       margin: auto;
+    }
+
+    .former {
+      width: 57% !important;
+    }
+
+    .txt {
+      width: 16% !important;
+
     }
   </style>
 </head>
@@ -19,7 +28,7 @@
 <body>
   <div class="p-2 container">
     <div class="form-box p-3">
-      
+
       <h3>Please fill your information</h3>
 
       <div class="mb-3">
@@ -37,7 +46,8 @@
 
     <div class="form-box p-3 d-flex justify-content-between text-center">
       <div class="form-check form-check-inline">
-        <input class="form-check-input text-center" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <input class="form-check-input text-center" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+          value="option1">
         <label class="form-check-label text-center" for="inlineRadio1">Tax ID</label>
       </div>
       <div class="form-check form-check-inline">
@@ -49,25 +59,45 @@
     <br>
 
     <div class="form-box p-3">
-      <div class="mb-3" d-flex>
+      <div class="mb-3 d-flex">
         <label for="formGroupExampleInput" class="form-label">Citizenship</label>
         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Citizenship">
         <label for="formGroupExampleInput" class="form-label">Country</label>
         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Country">
       </div>
-      <div class="mb-3" d-flex>
-        <label for="formGroupExampleInput" class="form-label">Day Phone</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Day Phone">
-        <label for="formGroupExampleInput" class="form-label">Evening Phone</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Evening Phone">
+
+
+
+      <div class="mb-3 d-flex gap-3">
+
+
+        <div class="txt">
+          <label for="formGroupExampleInput" class="form-label  ">Day Phone</label>
+        </div>
+
+
+        <input type="text" class="form-control former" id="formGroupExampleInput" placeholder="Day Phone">
+        <div class="txt">
+
+          <label for="formGroupExampleInput" class="form-label  ">evening Phone</label>
+        </div>
+
+
+        <input type="text" class="form-control former" id="formGroupExampleInput" placeholder="Evening Phone">
       </div>
-      <div class="mb-3" d-flex>
+
+
+
+
+
+
+      <div class="mb-3 d-flex">
         <label for="formGroupExampleInput" class="form-label">Address Line 1</label>
         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Address Line 1">
         <label for="formGroupExampleInput" class="form-label">Address Line 2</label>
         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Address Line 2">
       </div>
-      <div class="mb-3" d-flex>
+      <div class="mb-3 d-flex ">
         <label for="formGroupExampleInput" class="form-label">City</label>
         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="City">
         <label for="formGroupExampleInput" class="form-label">State</label>
@@ -80,7 +110,8 @@
 
     <div class="form-box p-3">
       <div class="form-check form-check-inline">
-        <input class="form-check-input text-center" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <input class="form-check-input text-center" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+          value="option1">
         <label class="form-check-label text-center" for="inlineRadio1">Subject to backup with holding</label>
       </div>
       <div class="form-check form-check-inline">
