@@ -1,7 +1,6 @@
-const numbers = [1, 2, 3, 4, 5, 6];
-for (let num of numbers) {
+const arr = [10, 3.04, 4766, 216.60];
+for (let num of arr) {
   if (num % 2 === 0) {
     console.log(num);
   }
 }
-// Output: 2, 4, 6 (on separate lines)

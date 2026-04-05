@@ -4,4 +4,4 @@ let students = [
 ];
 
 let names = students.map(student => student.name);
-console.log(names); // Output: ["A", "B"]
+console.log(names);

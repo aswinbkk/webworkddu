@@ -1,3 +1,3 @@
-const numbers = [5, 10, 15, 20];
-const sum = numbers.reduce((total, current) => total + current, 0);
-console.log("Sum:", sum); // Output: 50
+const arr = [10, 3.04, 4766, 216.60];
+const sum = arr.reduce((total, current) => total + current, 0);
+console.log("Sum:", sum);

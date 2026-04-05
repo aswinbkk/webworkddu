@@ -1,3 +1,3 @@
-const fruits = ["apple", "banana", "mango"];
-const hasBanana = fruits.includes("banana");
-console.log(hasBanana); // Output: true
+const arr = ["web", "technology", "exam"];
+const exists = arr.includes("exam");
+console.log(exists);
