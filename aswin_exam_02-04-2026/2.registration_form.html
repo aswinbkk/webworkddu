@@ -93,15 +93,17 @@
     let form_id = document.getElementById('form_id');
     form_id.addEventListener('submit', function(parameter){
     parameter.preventDefault();
-      
+
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
       const password = document.getElementById('password').value.trim();
+      const gender = document.querySelector('input[name="gender"]:checked');
+      const hobbies = document.querySelectorAll('input[type="checkbox"]:checked');
       const error = document.getElementById('error'); 
       error.textContent = "";
-
-      if (name=="" || email=="" || password=="") {
-        error.textContent = 'Please fill in Name, Email, and Password!';
+ 
+      if (name=="" || email=="" || password=="" || !gender || hobbies.length === 0) {
+        error.textContent = 'Please fill in all fields and select at least one hobby!';
       }
       
       else alert('Form submitted successfully!');
