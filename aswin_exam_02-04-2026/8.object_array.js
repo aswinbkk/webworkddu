@@ -1,7 +1,3 @@
-let students = [
-  {name: "A", marks: 80},
-  {name: "B", marks: 60}
-];
-
-let names = students.map(student => student.name);
-console.log(names);
+let objectArray = [ {name: "name1", marks: 10}, {name: "name2", marks: 20} ];
+let mapName = objectArray.map(variable => variable.name);
+console.log(mapName);

@@ -1,6 +1,8 @@
 const arr = [10, 3.04, 4766, 216.60];
-for (let num of arr) {
-  if (num % 2 === 0) {
-    console.log(num);
+let forOfEven=[];
+  for (let variable of arr) {
+    if (variable % 2 === 0) {
+      forOfEven.push(variable);
+    }
   }
-}
+console.log(`Even numbers in given array = ${forOfEven}`);

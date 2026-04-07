@@ -14,11 +14,11 @@ const arr = [1,24.68,8673.95,436,8];
   console.log(mapName);
 
 // To get all even numbers from an array.
-  const filtterEven = arr.filter(variable => variable % 2 === 0)
+  const filtterEven = arr.filter(variable => variable % 2 === 0);
   console.log(`Even numbers = ${filtterEven}`);
 
 // Check if an element exists in an array.
-  const includesExists = arr.includes(8673.95)
+  const includesExists = arr.includes(8673.95);
   console.log(`Even exists in an array = ${includesExists}`);
 
 // Sort an array in ascending order.
@@ -26,7 +26,7 @@ const arr = [1,24.68,8673.95,436,8];
   console.log(`Sorted array in ascending order = ${arr}`);
 
 // Sum of all elements in an array.
-  const reduceSum = arr.reduce((total, current) => total + current, 0);
+  const reduceSum = arr.reduce((variableTotal, variableCurrent) => variableTotal + variableCurrent, 0);
   console.log(`Sum of the given array = ${reduceSum}`);
 
 // Print only even numbers from an array.

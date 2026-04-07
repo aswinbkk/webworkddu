@@ -1,3 +1,3 @@
 const arr = [10, 3.04, 4766, 216.60];
-const doubled = arr.map(num => num * 2);
-console.log(doubled);
+const mapDouble = arr.map(variable => variable*2);
+console.log(`Doubled numbers = ${mapDouble}`);
