@@ -26,7 +26,7 @@ const arr = [1,24.68,8673.95,436,8];
   console.log(`Sorted array in ascending order = ${arr}`);
 
 // Sum of all elements in an array.
-  const reduceSum = arr.reduce((variableTotal, variableCurrent) => variableTotal + variableCurrent, 0);
+  const reduceSum = arr.reduce((accumulator, variableCurrent) => accumulator + variableCurrent, 0);
   console.log(`Sum of the given array = ${reduceSum}`);
 
 // Print only even numbers from an array.
