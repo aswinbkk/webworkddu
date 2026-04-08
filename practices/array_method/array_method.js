@@ -19,7 +19,7 @@ const arr = [1,24.68,8673.95,436,8];
 
 // Check if an element exists in an array.
   const includesExists = arr.includes(8673.95);
-  console.log(`Even exists in an array = ${includesExists}`);
+  console.log(`Given element exists in an array = ${includesExists}`);
 
 // Sort an array in ascending order.
   arr.sort((a,b) => a-b);
