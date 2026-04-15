@@ -1,0 +1,95 @@
+1. Database and Collection Creation
+To switch to (or create) the database and create the collection:
+
+use school
+db.createCollection("student")
+
+
+2. Create (Insert)
+Inserting multiple students with personal details, subject marks, and a creation date:
+
+db.student.insertMany([
+  {
+    name: "Aisha",
+    age: 20,
+    contact: "aisha@example.com",
+    total: 160,
+    marks: { math: 85, english: 75 },
+    createdAt: new Date()
+  },
+  {
+    name: "Rahul",
+    age: 21,
+    contact: "rahul@example.com",
+    total: 62,
+    marks: { math: 30, english: 32 },
+    createdAt: new Date()
+  },
+  {
+    name: "Maya",
+    age: 19,
+    contact: "maya@example.com",
+    total: 180,
+    marks: { math: 90, english: 90 },
+    createdAt: new Date()
+  }
+])
+
+
+3. Read
+Read all students:
+db.student.find()
+
+Read one student:
+db.student.findOne()
+
+Find passed students (Math >= 35):
+db.student.find({ "marks.math": { $gte: 35 } })
+
+Find students with English mark < 35:
+db.student.find({ "marks.english": { $lt: 35 } })
+
+Read students with math mark greater than 40:
+db.student.find({ "marks.math": { $gt: 40 } })
+
+Read only names and marks of the students (using projection):
+db.student.find({}, { name: 1, marks: 1, _id: 0 })
+
+
+4. Sort & Limit
+Sort by highest marks (sorting by math in descending order as an example):
+db.student.find().sort({ "marks.math": -1 })
+
+Limit results (Top 2 students):
+db.student.find().sort({ "marks.math": -1 }).limit(2)
+
+
+5. Update
+Update a student's marks:
+db.student.updateOne(
+  { name: "Rahul" }, 
+  { $set: { "marks.math": 45 } }
+)
+
+Add a new subject (adds a 'science' field inside the 'marks' object for all documents):
+db.student.updateMany(
+  {}, 
+  { $set: { "marks.science": 0 } }
+)
+
+Increase all students' total mark by 5:
+db.student.updateMany(
+  {}, 
+  { $inc: { total: 5 } }
+)
+
+
+6. Delete
+Delete one student:
+db.student.deleteOne({ name: "Rahul" })
+
+Delete the marks field (removes the entire marks object from all documents):
+db.student.updateMany(
+  {}, 
+  { $unset: { marks: "" } }
+)

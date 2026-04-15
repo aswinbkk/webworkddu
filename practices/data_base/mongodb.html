@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Database</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; max-width: 600px; }
+        .form-group { margin-bottom: 10px; }
+        input { padding: 8px; width: 100%; box-sizing: border-box; }
+        button { padding: 10px 15px; background: #007bff; color: white; border: none; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        .student-card { border: 1px solid #ddd; padding: 10px; margin-top: 10px; border-radius: 5px;}
+    </style>
+</head>
+<body>
+
+    <h2>Add New Student</h2>
+    <form id="studentForm">
+        <div class="form-group">
+            <input type="text" id="name" placeholder="Student Name" required>
+        </div>
+        <div class="form-group">
+            <input type="number" id="mathMark" placeholder="Math Mark" required>
+        </div>
+        <div class="form-group">
+            <input type="number" id="englishMark" placeholder="English Mark" required>
+        </div>
+        <button type="submit">Save Student</button>
+    </form>
+
+    <hr>
+
+    <h2>Student List</h2>
+    <button id="loadStudentsBtn">Load Students</button>
+    <div id="studentList"></div>
+
+    <script src="mongodb.js"></script>
+</body>
+</html>
