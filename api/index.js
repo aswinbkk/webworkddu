@@ -1,7 +1,4 @@
-
-
-
-let lists= document.getElementById('lists')
+let lists = document.getElementById('lists')
 
 
 const getdata = async()=>{
@@ -14,7 +11,5 @@ categories.map(e=>{
     li.innerHTML+=e.strCategory
     lists.appendChild(li)
 })
-
-
 }
 getdata()
