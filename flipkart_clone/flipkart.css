@@ -1,0 +1,116 @@
+*{
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			font-family: 'Inter', Arial, sans-serif;
+		}
+		
+		nav {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			background-color: #ffffff;
+			padding: 10px 20px;
+			color: rgb(29, 28, 28);
+			border-bottom: 1px solid rgba(80, 74, 74, 0.678);
+		}
+		.nav_sec2 {
+			display: flex;
+		} 
+		.nav_sec3 ul {
+			list-style: none;
+			display: flex;
+			gap: 10px;
+		}
+		.nav_sec3 li {
+			display: flex;
+			justify-content: center;
+		}
+		.down_icon{
+			width: 10px;
+		}
+		.profile_icon, .cart_icon {
+			width: 20px;
+		}
+		.search_container {
+			display: flex;
+			justify-content: center;
+			
+			border: 2px solid cornflowerblue;
+			border-radius: 10px;
+			align-items: center;
+		}
+		.search_container input {
+			width: 390px;
+			padding: 8px 12px;
+			border: none;
+			outline: none;
+			border-radius: 10px;
+		}
+		.search_container .search_icon {
+			
+			width: 20px;
+			height: 20px;
+		}
+		.container{
+			max-width: 1300px;
+		}
+		.slider {
+			display: flex;
+			gap: 20px;
+			justify-content: center;
+			padding: 20px;
+		}
+		.slider img{
+			width: 500px;
+		}
+		.menu {
+			display: grid;
+			grid-template-columns: repeat(6,2fr);
+			border: 1px solid rgba(80, 74, 74, 0.678);
+			border-radius: 10px;
+			padding: 10px;
+			margin: 20px;
+		}
+		.menu div{
+			text-align: center;
+			font-size: small;
+		}
+		.submenu {
+			padding: 10px;
+		}
+		.testimonials{
+			display: grid;
+			grid-template-columns: repeat(2,2fr);
+			border: 1px solid rgba(80, 74, 74, 0.678);
+			border-radius: 10px;
+			padding: 10px;
+			margin: 20px;
+		}
+		
+		.main_div{
+			background-color: rgba(226, 226, 226, 0.701);
+			border-radius: 10px;
+			padding: 10px;
+			margin: 10px;
+			display: flex;
+		}
+
+		.main_div img{ 
+			width: 70px;
+		}
+
+		.review_div {
+			padding-left: 10px;
+			text-align: justify;
+		}
+		.review_name{
+			text-align-last: right;
+			font-style: italic;
+			font-size: 14px;
+		}
+		.review_text{
+			font-size: 12px;
+			font-style: inherit;
+		}
