@@ -10,25 +10,25 @@ Inserting multiple students with personal details, subject marks, and a creation
 
 db.student.insertMany([
   {
-    name: "Aisha",
+    name: "Aswin",
     age: 20,
-    contact: "aisha@example.com",
+    contact: "aswin@example.com",
     total: 160,
     marks: { math: 85, english: 75 },
     createdAt: new Date()
   },
   {
-    name: "Rahul",
+    name: "Abhin",
     age: 21,
-    contact: "rahul@example.com",
+    contact: "abhin@example.com",
     total: 62,
     marks: { math: 30, english: 32 },
     createdAt: new Date()
   },
   {
-    name: "Maya",
+    name: "Akhil",
     age: 19,
-    contact: "maya@example.com",
+    contact: "akhil@example.com",
     total: 180,
     marks: { math: 90, english: 90 },
     createdAt: new Date()
@@ -67,7 +67,7 @@ db.student.find().sort({ "marks.math": -1 }).limit(2)
 5. Update
 Update a student's marks:
 db.student.updateOne(
-  { name: "Rahul" }, 
+  { name: "Aswin" }, 
   { $set: { "marks.math": 45 } }
 )
 
@@ -86,7 +86,7 @@ db.student.updateMany(
 
 6. Delete
 Delete one student:
-db.student.deleteOne({ name: "Rahul" })
+db.student.deleteOne({ name: "Aswin" })
 
 Delete the marks field (removes the entire marks object from all documents):
 db.student.updateMany(
