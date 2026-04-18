@@ -6,7 +6,7 @@ const api= await fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
 const data = await api.json()
 
 const {categories} = data
-console.log(categories);
+console.log(data);
 
 cardContainer.style.display = "grid";
 cardContainer.style.gridTemplateColumns="repeat(4, 1fr)"
