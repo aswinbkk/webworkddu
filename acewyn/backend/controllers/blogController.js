@@ -20,4 +20,13 @@ const CreateBlog = async(req,res)=>{
     }
 }
 
-module.exports= {CreateBlog}
+const getposts = async(req,res)=>{
+    try{
+        const posts=await Blog.find().sort({createdAt:-1})
+        res.status(200).json({msg:"all post", data:posts})
+    } catch(error){
+        res.status(500).json({msg:"server error"})
+    }
+}
+
+module.exports= {CreateBlog, getposts}
