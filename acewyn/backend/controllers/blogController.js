@@ -19,7 +19,5 @@ const CreateBlog = async(req,res)=>{
         res.status(500).json({msg:"server error"})
     }
 }
-const getdata = async()=>{
 
-}
-module.exports= {CreateBlog,getdata}
+module.exports= {CreateBlog}
