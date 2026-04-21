@@ -1,5 +1,7 @@
-const express = require ('express')
+const express = require('express')
 const Router = express.Router()
-const BlogControll = require('../controllers/Blog');
-Router.post('/blog',BlogControll.CreateBlog);
-module.express = Router;
+const BlogController = require('../controllers/blogController')
+
+Router.post('/createblog',BlogController.CreateBlog)
+
+module.exports = Router

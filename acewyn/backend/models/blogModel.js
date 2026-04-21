@@ -1,21 +1,20 @@
 const mongoose = require('mongoose')
-const Blogschema = new mongoose.Schema({
+
+const BlogSchema = new mongoose.Schema({
     title:{
-        type : String,
-        required : true
-    }, {Timestamp : true},
-
+        type:String,
+        required:true
+    },
     description:{
-        type : String,
-        required : true
-    }, {Timestamp : true},
-
+        type:String,
+        required:true 
+    },
     author:{
-        type : String,
-        require : true
-    }, {Timestamp : true}
-})
+        type:String,
+        required:true
+    }
+},{timestamps:true})
 
-const Blog = Mongoose.Model('blog',Blogschema)
+const Blog = mongoose.model('blog', BlogSchema)
 
-module.exports = Blogschema
+module.exports= Blog
