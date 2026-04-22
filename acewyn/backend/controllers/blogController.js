@@ -29,4 +29,30 @@ const getposts = async(req,res)=>{
     }
 }
 
-module.exports= {CreateBlog, getposts}
+const updatepost = async(req,res)=>{
+    try{
+        const {id}=req.params
+        const updatepost = await Blog.findByIdAndUpdate(id,req.body,{new:true})
+        if(!updatepost){
+        res.status(404).json({msg:"post not fonud"})
+        }
+        res.status(200).json({msg:"post updated", updateddata : updatepost})
+    } catch(error){
+        res.status(500).json({msg:"server error"})
+    }
+}
+
+const deletepost = async(req,res)=>{
+    try{
+        const {id}=req.params
+        const deletepost = await Blog.findByIdAndDelete(id,req.body,{new:true})
+        if(!deletepost){
+        res.status(404).json({msg:"post not fonud"})
+        }
+        res.status(200).json({msg:"post deleted", deleteddata : deletepost})
+    } catch(error){
+        res.status(500).json({msg:"server error"})
+    }
+}
+
+module.exports= {CreateBlog, getposts, updatepost, deletepost}
