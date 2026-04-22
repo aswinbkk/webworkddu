@@ -4,8 +4,8 @@ const BlogController = require('../controllers/blogController')
 
 Router.post('/createblog',BlogController.CreateBlog)
 Router.get('/allpost',BlogController.getposts)
-Router.put('/updatepost',BlogController.updatepost)
-Router.delete('/deletepost',BlogController.deletepost)
+Router.put('/updatepost/:id',BlogController.updatepost)
+Router.delete('/deletepost/:id',BlogController.deletepost)
 
 
 module.exports = Router
