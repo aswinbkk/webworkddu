@@ -2,10 +2,13 @@ const express = require('express');
 const app = express();
 const connectDB = require('./config/db');
 connectDB();
-const Blogroute= require('./routes/blogRoute')
+const postRoute= require('./routes/postRoute')
+const userRoute = require('./routes/userRoute')
 
 app.use(express.json())
-app.use('/blog',Blogroute)
+app.use('/post',postRoute)
+app.use('/user',userRoute)
+
 
 const port = process.env.PORT;
 
