@@ -29,9 +29,9 @@ const getPosts = async (req,res) => {
 const updatePost = async (req,res) => {
     try {
         const {id} = req.params
-        const updateData = await post.findByIdAndUpdate(id,req.body, {new: true})
+        const updateData = await post.findByIdAndUpdate(id,req.body, {returnDocument: 'after'})
         if (!updateData) {
-            res.status(404).json({msg: "post not fonud"})
+            return res.status(404).json({msg: "post not fonud"})
         }
         res.status(200).json({msg:"post updated", updateddata:updateData})
     } catch (error) {
@@ -44,7 +44,7 @@ const deletePost = async (req,res) => {
         const {id} = req.params
         const deleteData = await post.findByIdAndDelete(id)
         if (!deleteData) {
-            res.status(404).json({msg:"post not fonud"})
+           return res.status(404).json({msg:"post not fonud"})
         }
         res.status(200).json({msg:"post deleted"})
     } catch (error) {
