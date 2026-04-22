@@ -5,7 +5,7 @@ connectDB();
 const Blogroute= require('./routes/blogRoute')
 
 app.use(express.json())
-app.use('/',Blogroute)
+app.use('/blog',Blogroute)
 
 const port = process.env.PORT;
 
