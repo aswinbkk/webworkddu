@@ -1,12 +1,13 @@
 const user = require('../models/userModel')
 
 const createUser = async (req,res) => {
-    const {name,email,phone,dob} = req.body
+    const {name,email,password,phone,dob} = req.body
 
     try {
         const newData = await new user({
             name,
             email,
+            password,
             phone,
             dob
         })
