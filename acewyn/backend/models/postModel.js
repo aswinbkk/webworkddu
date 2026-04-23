@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 const postSchema = new mongoose.Schema({
     title:
@@ -16,8 +16,8 @@ const postSchema = new mongoose.Schema({
         type:String,
         required:true
     }
-},{timestamps:true})
+},{timestamps:true});
 
-const post = mongoose.model('posts', postSchema)
+const post = mongoose.model('posts', postSchema);
 
-module.exports= post
+module.exports= post;
