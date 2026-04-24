@@ -6,20 +6,20 @@ const createUser = async (req,res) => {
     const {name,email,password,phone,dob} = req.body
 
     try {
-        const user= await user.findone({email});
-        if(user){
+        const existUser= await user.findOne({email});
+        if(existUser){
             return res.status(400).json({msg:"user exists"})
         }
         const hashPassword = await bcrypt.hash(password,saltround)
-        const newData = await new user({
+        const newUser = await new user({
             name,
             email,
             password:hashPassword,
             phone,
             dob
         });
-        await newData.save();
-        res.status(203).json({msg:`user created succesfully data is :${newData}`});
+        await newUser.save();
+        res.status(203).json({msg:`user created succesfully data is :${newUser}`});
 
     } catch (error) {
         res.status(500).json({msg:"server error"});
