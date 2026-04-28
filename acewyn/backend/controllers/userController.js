@@ -12,11 +12,11 @@ const createUser = async (req,res) => {
         }
         const hashPassword = await bcrypt.hash(password,saltround)
         const newUser = await new user({
-            name,
+            fullname.firstname,
+            fullname.lastname,
             email,
             password:hashPassword,
-            phone,
-            dob
+            phone
         });
         await newUser.save();
         res.status(203).json({msg:`user created succesfully data is :${newUser}`});
