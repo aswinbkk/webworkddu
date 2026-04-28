@@ -1,0 +1,50 @@
+//Create collection update 5 student
+
+use school
+db.createCollection("student")
+
+
+db.student.insertMany([
+  {
+    name: "Aswin",
+    class: "10th",
+    age: 29,
+    marks: { math: 85, science:78, english: 75 },
+  },
+  {
+    name: "Adarsh",
+    class: "10th",
+    age: 29,
+    marks: { math: 85, science:78, english: 75 },
+  },
+  {
+    name: "Vishnu",
+    class: "10th",
+    age: 29,
+    marks: { math: 85, science:78, english: 75 },
+  },
+{
+    name: "Abhinav",
+    class: "10th",
+    age: 29,
+    marks: { math: 85, science:78, english: 75 },
+  },
+{
+    name: "Abhiram",
+    class: "10th",
+    age: 29,
+    marks: { math: 85, science:78, english: 75 },
+  }
+])
+
+//update marks
+db.student.updateOne(
+  { name: "Aswin" }, 
+  { $set: { "marks.math": 45 } }
+)
+
+//add new field
+db.student.updateMany(
+  {}, 
+  { $set: { "marks.hindi": 0 } }
+)
