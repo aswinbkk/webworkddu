@@ -1,5 +1,11 @@
+import styled from 'styled-components'
 import '../style/Navbar.css'
 
+const Button = styled.button`
+    max-width:60px;
+    color: red;
+    background-color: green;
+`
 const Navbar = () => {
     return (
         <div class="navbar_container">
@@ -14,7 +20,8 @@ const Navbar = () => {
                 </ul>
             </div>
             <div class="navbar_right">
-                <button>login</button>
+                <Button>Login</Button>
+                <Button>Sign Up</Button>
             </div>
         </div>
     )
