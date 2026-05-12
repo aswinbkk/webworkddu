@@ -3,18 +3,20 @@ import React, { useEffect, useState } from 'react';
 import { getData } from '../api/apiSearch';
 
 const Container = styled.div`
-display:flex;
+display:grid;
+grid-template-columns:repeat(6,2fr);
 gap:20px;
 padding:10px;
 `;
 
 const Card = styled.div`
-width:200px;
-height:100px;
+max-width:200px;
+max-height:100px;
 background-color:#fffdd0;
 border-radius:10px;
 padding:10px;
 text-align:center;
+border: 2px solid black;
 `;
 const Title = styled.p`
 font-size:16px;
