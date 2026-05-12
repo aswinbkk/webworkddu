@@ -8,17 +8,16 @@ const Search = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await getData();
-                console.log(res);
-                
-                setData(res.data);
+                const response = await getData();
+                setData(response.data);
+                console.log(response);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
         };
-
         fetchData();
     }, []);
+
     return (
         <div>
             <h1>Search</h1>
