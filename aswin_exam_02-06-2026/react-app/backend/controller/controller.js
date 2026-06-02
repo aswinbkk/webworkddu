@@ -27,7 +27,7 @@ const getPosts = async (req, res) => {
 
 const updatePost = async (req, res) => {
     try {
-        const { id } = req.param;
+        const { id } = req.params;
         const updateData = await User.findByIdAndUpdate(id, req.body, { returnDocument: 'after' });
         if (!updateData) {
             return res.status(404).json({ msg: "post not fonud" });
@@ -40,7 +40,7 @@ const updatePost = async (req, res) => {
 
 const deletePost = async (req, res) => {
     try {
-        const { id } = req.param;
+        const { id } = req.params;
         const deleteData = await User.findByIdAndDelete(id);
         if (!deleteData) {
             return res.status(404).json({ msg: "post not fonud" });
@@ -52,3 +52,4 @@ const deletePost = async (req, res) => {
 };
 
 module.exports = { createPost, getPosts, updatePost, deletePost };
+

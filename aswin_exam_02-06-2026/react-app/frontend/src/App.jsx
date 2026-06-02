@@ -1,10 +1,8 @@
-import Navbar from "./components/Navbar"
 import Routing from "./routing/Routing"
 
 const App = () => {
   return (
     <>
-      <Navbar />
       <Routing />
     </>
   )
