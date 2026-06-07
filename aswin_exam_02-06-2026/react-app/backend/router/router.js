@@ -3,7 +3,7 @@ const Router = express.Router()
 const Controller = require('../controller/controller')
 
 Router.post('/create', Controller.createPost)
-Router.get('/viewall', Controller.getPosts)
+Router.get('/read', Controller.readPosts)
 Router.put('/update/:id', Controller.updatePost)
 Router.delete('/delete/:id', Controller.deletePost)
 

@@ -1,6 +1,6 @@
 const baseUrl = "http://localhost:3000/home";
 
-export const createUser = async (userData) => {
+export const createPost = async (userData) => {
     try {
         const response = await fetch(`${baseUrl}/create`,
             {
@@ -20,14 +20,14 @@ export const createUser = async (userData) => {
 };
 
 
-export const getViewAll = async () => {
+export const readPosts = async () => {
 
     try {
-        const response = await fetch(`${baseUrl}/viewall`,
+        const response = await fetch(`${baseUrl}/read`,
             { method: "GET" }
         );
         const data = await response.json();
-        console.log("View All Response:", data);
+        //console.log("View All Response:", data);
         return data;
 
     } catch (error) {
@@ -36,7 +36,7 @@ export const getViewAll = async () => {
     }
 };
 
-export const updateUser = async (id, postData) => {
+export const updatePost = async (id, postData) => {
     try {
         const response = await fetch(`${baseUrl}/update/${id}`,
             {
@@ -55,7 +55,7 @@ export const updateUser = async (id, postData) => {
 };
 
 
-export const deleteUser = async (id) => {
+export const deletePost = async (id) => {
     try {
         const response = await fetch(`${baseUrl}/delete/${id}`,
             {

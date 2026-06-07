@@ -9,17 +9,17 @@ const createPost = async (req, res) => {
             description
         });
         await newData.save();
-        res.status(203).json({ msg: `created succesfully data is :${newData}` });
+        res.status(203).json({ msg: `Record has been created successfully` });
 
     } catch (error) {
         res.status(500).json({ msg: "server error" });
     }
 };
 
-const getPosts = async (req, res) => {
+const readPosts = async (req, res) => {
     try {
         const getData = await User.find().sort({ createdAt: -1 });
-        res.status(200).json({ msg: "all post", data: getData });
+        res.status(200).json({ msg: `Record has been read successfully`, data:getData });
     } catch (error) {
         res.status(500).json({ msg: "server error" });
     }
@@ -32,7 +32,7 @@ const updatePost = async (req, res) => {
         if (!updateData) {
             return res.status(404).json({ msg: "post not fonud" });
         }
-        res.status(200).json({ msg: "post updated", data: updateData });
+        res.status(200).json({ msg: `Record has been updated successfully` });
     } catch (error) {
         res.status(500).json({ msg: "server error" });
     }
@@ -45,11 +45,11 @@ const deletePost = async (req, res) => {
         if (!deleteData) {
             return res.status(404).json({ msg: "post not fonud" });
         }
-        res.status(200).json({ msg: "post deleted" });
+        res.status(203).json({ msg: `Record has been deleted successfully` });
     } catch (error) {
         res.status(500).json({ msg: "server error" });
     }
 };
 
-module.exports = { createPost, getPosts, updatePost, deletePost };
+module.exports = { createPost, readPosts, updatePost, deletePost };
 

@@ -1,9 +1,9 @@
-import Routing from "./routing/Routing"
+import Home from "./page/Home"
 
 const App = () => {
   return (
     <>
-      <Routing />
+      <Home />
     </>
   )
 }
