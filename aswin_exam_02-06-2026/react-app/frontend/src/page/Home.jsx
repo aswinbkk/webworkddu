@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { createPost, readPosts, updatePost, deletePost } from "../api/apiPost";
+import { createUser, readUsers, updateUser, deleteUser } from "../api/apiUser";
 
 const Home = () => {
-  const [posts, setPosts] = useState([]);
+  const [users, setUsers] = useState([]);
   const [formData, setFormData] = useState({
     name: "",
     description: "",
@@ -10,20 +10,19 @@ const Home = () => {
   const [editId, setEditId] = useState(null);
 
   // Fetch all users
-  const fetchPosts = async () => {
-  try {
-    const response = await readPosts();
+  const fetchUsers = async () => {
+    try {
+      const response = await readUsers();
+      setUsers(response.data || []);
+      console.log(response);
 
-    setPosts(response.data || []);
-
-    console.log(response);
-  } catch (error) {
-    console.error("Error fetching users:", error);
-  }
-};
+    } catch (error) {
+      console.error("Error fetching users:", error);
+    }
+  };
 
   useEffect(() => {
-    fetchPosts();
+    fetchUsers();
   }, []);
 
   // Handle input changes
@@ -36,24 +35,20 @@ const Home = () => {
     }));
   };
 
-  // Create or Update post
+  // Create or update user
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       if (editId) {
-        await updatePost(editId, formData);
+        await updateUser(editId, formData);
         setEditId(null);
       } else {
-        await createPost(formData);
+        await createUser(formData);
       }
+      setFormData({ name: "", description: "" });
+      fetchUsers();
 
-      setFormData({
-        name: "",
-        description: "",
-      });
-
-      fetchPosts();
     } catch (error) {
       console.error("Error saving user:", error);
     }
@@ -62,24 +57,22 @@ const Home = () => {
   // Set form values for editing
   const handleEdit = (data) => {
     setEditId(data._id);
-
     setFormData({
       name: data.name,
       description: data.description,
     });
   };
 
-  // Delete Post
+  // Delete user
   const handleDelete = async (id) => {
     const confirmDelete = window.confirm(
       "Are you sure you want to delete this user?"
     );
-
     if (!confirmDelete) return;
 
     try {
-      await deletePost(id);
-      fetchPosts();
+      await deleteUser(id);
+      fetchUsers();
     } catch (error) {
       console.error("Error deleting user:", error);
     }
@@ -87,18 +80,8 @@ const Home = () => {
 
   return (
     <div style={{ padding: "20px", maxWidth: "800px", margin: "0 auto" }}>
-      <h1>Post CRUD App</h1>
-
-      {/* Form */}
-      <form
-        onSubmit={handleSubmit}
-        style={{
-          display: "flex",
-          gap: "10px",
-          marginBottom: "20px",
-          flexWrap: "wrap",
-        }}
-      >
+      <h1>User CRUD App</h1>
+      <form onSubmit={handleSubmit} style={{ display: "flex", gap: "10px", marginBottom: "20px", flexWrap: "wrap" }}>
         <input
           type="text"
           name="name"
@@ -128,10 +111,7 @@ const Home = () => {
             type="button"
             onClick={() => {
               setEditId(null);
-              setFormData({
-                name: "",
-                description: "",
-              });
+              setFormData({ name: "", description: "" });
             }}
           >
             Cancel
@@ -141,20 +121,12 @@ const Home = () => {
 
       <hr />
 
-      {/* Post List */}
       <h2>All Users</h2>
-
-      {posts.length === 0 ? (
+      {users.length === 0 ? (
         <p>No Users Found</p>
       ) : (
-        <table
-          border="1"
-          cellPadding="10"
-          style={{
-            width: "100%",
-            borderCollapse: "collapse",
-            marginTop: "10px",
-          }}
+        <table border="1" cellPadding="10"
+          style={{ width: "100%", borderCollapse: "collapse", marginTop: "10px" }}
         >
           <thead>
             <tr>
@@ -165,21 +137,16 @@ const Home = () => {
           </thead>
 
           <tbody>
-            {posts.map((data) => (
+            {users.map((data) => (
               <tr key={data._id}>
                 <td>{data.name}</td>
                 <td>{data.description}</td>
-
                 <td>
                   <button onClick={() => handleEdit(data)}>Edit</button>
 
                   <button
                     onClick={() => handleDelete(data._id)}
-                    style={{
-                      marginLeft: "10px",
-                      backgroundColor: "red",
-                      color: "white",
-                    }}
+                    style={{ marginLeft: "10px", backgroundColor: "red", color: "white" }}
                   >
                     Delete
                   </button>

@@ -1,6 +1,6 @@
-const baseUrl = "http://localhost:3000/home";
+const baseUrl = "http://localhost:3000/user";
 
-export const createPost = async (userData) => {
+export const createUser = async (userData) => {
     try {
         const response = await fetch(`${baseUrl}/create`,
             {
@@ -14,29 +14,31 @@ export const createPost = async (userData) => {
         return data;
 
     } catch (error) {
-        console.error("Register User Error:", error);
+        console.error("Create user error:", error);
         return null;
     }
 };
 
 
-export const readPosts = async () => {
+export const readUsers = async () => {
 
     try {
         const response = await fetch(`${baseUrl}/read`,
-            { method: "GET" }
+            {
+                method: "GET"
+            }
         );
         const data = await response.json();
         //console.log("View All Response:", data);
         return data;
 
     } catch (error) {
-        console.error("Get Profile Error:", error);
+        console.error("Read user error:", error);
         return null;
     }
 };
 
-export const updatePost = async (id, postData) => {
+export const updateUser = async (id, postData) => {
     try {
         const response = await fetch(`${baseUrl}/update/${id}`,
             {
@@ -49,13 +51,13 @@ export const updatePost = async (id, postData) => {
         return data;
 
     } catch (error) {
-        console.error("Error:", error);
+        console.error("Update user error:", error);
         return null;
     }
 };
 
 
-export const deletePost = async (id) => {
+export const deleteUser = async (id) => {
     try {
         const response = await fetch(`${baseUrl}/delete/${id}`,
             {
@@ -66,7 +68,7 @@ export const deletePost = async (id) => {
         return data;
 
     } catch (error) {
-        console.error("Error:", error);
+        console.error("Delete user error:", error);
         return null;
     }
 };

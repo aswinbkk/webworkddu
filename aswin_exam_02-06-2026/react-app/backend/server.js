@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const connectDB = require('./config/db');
-const route = require('./router/router');
+const userRouter = require('./router/userRouter');
 
 connectDB();
 
@@ -13,7 +13,7 @@ app.use(
   })
 );
 app.use(express.json());
-app.use('/home', route);
+app.use('/user', userRouter);
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
