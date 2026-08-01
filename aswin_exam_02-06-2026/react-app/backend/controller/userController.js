@@ -1,55 +1,78 @@
-const User = require('../model/userModel');
+import User from "../models/User.js";
 
-const createUser = async (req, res) => {
-    const { name, description } = req.body;
-
-    try {
-        const newUser = await new User({
-            name,
-            description
-        });
-        await newUser.save();
-        res.status(203).json({ msg: "Record has been created successfully" });
-
-    } catch (error) {
-        res.status(500).json({ msg: "Server error" });
-    }
+export const createUser = async (req, res) => {
+  try {
+    const user = await User.create(req.body);
+    res.status(201).json({
+      success: true,
+      message: "User created successfully",
+      data: user,
+    });
+    
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
 };
 
-const readUsers = async (req, res) => {
-    try {
-        const getUsers = await User.find().sort({ createdAt: -1 });
-        res.status(200).json({ msg: "Record has been read successfully", data:getUsers });
-    } catch (error) {
-        res.status(500).json({ msg: "Server error" });
+export const readUsers = async (req, res) => {
+  try {
+    const users = await User.find();
+    res.status(200).json({
+      success:true,
+      message: "Users fetched successfully",
+      data: users,
+    });
+
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+}
+
+export const editUser = async (req, res) =>{
+   try {
+    const user = await User.findByIdAndUpdate(req.params.id,req.body,
+      { returnDocument: 'after', runValidators: true})
+
+      if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: "User not found",
+      });
     }
-};
 
-const updateUser = async (req, res) => {
-    try {
-        const { id } = req.params;
-        const getUsers = await User.findByIdAndUpdate(id, req.body, { returnDocument: 'after' });
-        if (!getUsers) {
-            return res.status(404).json({ msg: "Record not found" });
-        }
-        res.status(200).json({ msg: "Record has been updated successfully" });
-    } catch (error) {
-        res.status(500).json({ msg: "server error" });
-    }
-};
+    res.status(200).json({
+      success: true,
+      message: "User Updated successfully",
+      data: user,
+    });
 
-const deleteUser = async (req, res) => {
-    try {
-        const { id } = req.params;
-        const getUsers = await User.findByIdAndDelete(id);
-        if (!getUsers) {
-            return res.status(404).json({ msg: "Record not found" });
-        }
-        res.status(203).json({ msg: "Record has been deleted successfully" });
-    } catch (error) {
-        res.status(500).json({ msg: "Server error" });
-    }
-};
+   } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+   }
+}
 
-module.exports = { createUser, readUsers, updateUser, deleteUser };
+export const deleteUser = async (req, res) => {
+  try {
+    const user = await User.findByIdAndDelete(req.params.id)
+    res.status(200).json({
+      success: true,
+      message: "User deleted successfully",
+      data: user,
+    });
 
+  } catch (error) {
+    res.ststus(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+}
