@@ -1,64 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Page</title>
-    <style>
-      body
-      {
-        margin: 0;
-        font-family: sans-serif;
-      }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Website</title>
 
-      .connect_btn
-      {
-        border-radius: 20px;
-        padding: 8px 15px;
-        cursor: pointer;
-      }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      .hero
-      {
-        height: 100vh;
-        background: url(home_1.jpg) center/cover;
-        display: flex;
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background: #222;
+      color: white;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 15px 30px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navlinks a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .connect_btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 20px;
+      background: #00bfff;
+      color: white;
+      cursor: pointer;
+    }
+
+    .hero {
+      height: 90vh;
+
+      background:
+        linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
+        url("cover_image.jpg") center/cover no-repeat;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .hero button {
+      padding: 12px 25px;
+      border: none;
+      background: #00bfff;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .footer {
+      background: #222;
+      color: white;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 20px 30px;
+    }
+
+    .footer a {
+      color: #00bfff;
+      text-decoration: none;
+    }
+
+    @media (max-width:768px) {
+
+      .navbar {
         flex-direction: column;
-        justify-content: center;
+        gap: 15px;
+      }
+
+      .navlinks {
+        flex-direction: column;
         align-items: center;
-        color: white;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .footer {
+        flex-direction: column;
+        gap: 10px;
         text-align: center;
       }
 
-      .hero h1
-      {
-        font-size: 4rem;
-        margin-bottom: 10px;
-      }
+    }
+  </style>
 
-      .hero p
-      {
-        font-size: 1.5rem;
-      }
-
-      @media (max-width: 1024px) {
-        
-        }
-      @media (max-width: 768px) {
-        
-        }
-      @media (max-width: 320px) {
-        
-      }
-    </style>
-    
 </head>
+
 <body>
 
-  <header class="hero">
-    <h1>Main Title</h1>
-    <p>Hero section description.</p>
+  <nav class="navbar">
+
+    <div class="logo">MyLogo</div>
+
+    <div class="navlinks">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+    </div>
+
     <button class="connect_btn">Connect</button>
-  </header>
+
+  </nav>
+
+  <section class="hero">
+
+    <h1>My Website</h1>
+
+    <p> Description: cover_image, cover_image, cover_image, cover_image, cover_image, cover_image, cover_image. </p>
+
+    <button>Get Started</button>
+
+  </section>
+
+  <footer class="footer">
+
+    <div>© 2026 MyLogo</div>
+
+    <a href="#">Contact Us</a>
+
+  </footer>
+
 </body>
+
 </html>

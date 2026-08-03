@@ -1,115 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration From</title>
-    <style>
-      body
-      {
-        font-family: sans-serif;
-        display: flex;
-        justify-content: center;
-        padding: 50px;
-      }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration Form</title>
 
-      .form_container
-      {
-        border: 1px solid #ccc;
-        padding: 20px;
-        border-radius: 8px;
-        width: 300px;
-        background: #f9f9f9;
-      }
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			display: flex;
+			justify-content: center;
+			padding: 50px;
+		}
 
-      .form_group, .form_group_checkbox, .form_group_radio
-      {
-        margin-bottom: 15px;
-      }
+		.container {
+			width: 300px;
+			border: 1px solid #ccc;
+			padding: 20px;
+			border-radius: 5px;
+		}
 
-      .form_group label, .form_group_checkbox label, .form_group_radio label
-      {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-      }
+		.group {
+			margin-bottom: 15px;
+		}
 
-      .form_group input
-      {
-        width: 100%;
-        padding: 8px;
-        box-sizing: border-box; 
-      }
+		label {
+			display: block;
+			margin-bottom: 5px;
+			font-weight: bold;
+		}
 
-      .error 
-      {
-        color: red;
-        font-size: 0.8em;
-        margin-top: 5px;
-      }
-    </style>
+		input {
+			width: 100%;
+			padding: 8px;
+			box-sizing: border-box;
+		}
+
+		.inline input {
+			width: auto;
+		}
+
+		#message {
+			color: red;
+			margin-bottom: 10px;
+		}
+
+		button {
+			padding: 8px 15px;
+		}
+	</style>
 </head>
+
 <body>
 
-  <div class="form_container">
-    <h2>Register</h2>
-    <form id="form_id">
-      
-      <div class="form_group">
-        <label>Name:</label>
-        <input type="text" id="name" placeholder="Enter Name">
-      </div>
+	<div class="container">
 
-      <div class="form_group">
-        <label>Email:</label>
-        <input type="email" id="email" placeholder="Enter Email">
-      </div>
+		<h2>Registration Form</h2>
 
-      <div class="form_group">
-        <label>Password:</label>
-        <input type="password" id="password" placeholder="Enter Password">
-      </div>
+		<form id="form">
 
-      <div class="form_group_radio">
-        <label>Gender:</label>
-        <input type="radio" name="gender" value="Male"> Male
-        <input type="radio" name="gender" value="Female"> Female
-      </div>
+			<div class="group">
+				<label>Name</label>
+				<input type="text" id="name">
+			</div>
 
-      <div class="form_group_checkbox">
-        <label>Hobbies:</label>
-        <input type="checkbox" value="Reading"> Reading
-        <input type="checkbox" value="Sports"> Sports
-        <input type="checkbox" value="Music"> Music
-      </div>
+			<div class="group">
+				<label>Email</label>
+				<input type="email" id="email">
+			</div>
 
-      <p id="error" class="error"></p>
+			<div class="group">
+				<label>Password</label>
+				<input type="password" id="password">
+			</div>
 
-      <button type="submit">Submit</button>
-    </form>
-  </div>
+			<div class="group inline">
+				<label>Gender</label>
 
-  <script>
-    let form_id = document.getElementById('form_id');
-    form_id.addEventListener('submit', function(parameter){
-    parameter.preventDefault();
+				<input type="radio" name="gender" value="Male"> Male
+				<input type="radio" name="gender" value="Female"> Female
+			</div>
 
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const password = document.getElementById('password').value.trim();
-      const gender = document.querySelector('input[name="gender"]:checked');
-      const hobbies = document.querySelectorAll('input[type="checkbox"]:checked');
-      const error = document.getElementById('error'); 
-      error.textContent = "";
- 
-      if (name=="" || email=="" || password=="" || !gender || hobbies.length === 0) {
-        error.textContent = 'Please fill in all fields and select at least one hobby!';
-      }
-      
-      else alert('Form submitted successfully!');
+			<div class="group inline">
+				<label>Hobbies</label>
 
-    });
-  </script>
+				<input type="checkbox" name="hobby" value="Reading"> Reading
+				<input type="checkbox" name="hobby" value="Music"> Music
+				<input type="checkbox" name="hobby" value="Sports"> Sports
+			</div>
+
+			<p id="message"></p>
+
+			<button type="submit">Submit</button>
+
+		</form>
+
+	</div>
+
+	<script>
+
+		const form = document.getElementById("form");
+		const message = document.getElementById("message");
+
+		form.addEventListener("submit", function (event) {
+
+			event.preventDefault();
+
+			const name = document.getElementById("name").value.trim();
+			const email = document.getElementById("email").value.trim();
+			const password = document.getElementById("password").value.trim();
+			const gender = document.querySelector('input[name="gender"]:checked');
+			const hobbies = document.querySelectorAll('input[name="hobby"]:checked');
+
+			message.style.color = "red";
+			message.textContent = "";
+
+			if (name === "" || email === "" || password === "" || !gender || hobbies.length === 0) {
+				message.textContent = "Please fill all fields.";
+				return;
+			}
+
+			let hobbyList = [];
+
+			hobbies.forEach(function (hobby) {
+				hobbyList.push(hobby.value);
+			});
+
+			console.log("Name:", name);
+			console.log("Email:", email);
+			console.log("Password:", password);
+			console.log("Gender:", gender.value);
+			console.log("Hobbies:", hobbyList);
+
+			message.style.color = "green";
+			message.textContent = "Form Submitted Successfully!";
+
+			form.reset();
+
+		});
+
+	</script>
 
 </body>
+
 </html>

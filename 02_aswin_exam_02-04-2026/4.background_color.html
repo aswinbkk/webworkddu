@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Change on Click</title>
+    <title>Background Change</title>
+
     <style>
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            transition: background-color 0.3s;
         }
+
         button {
             padding: 10px 20px;
-            font-size: 16px;
             cursor: pointer;
         }
     </style>
 </head>
+
 <body>
 
-    <button onclick="changeColor()">Change Background Color</button>
+    <button id="btn">Change Background Color</button>
 
     <script>
-        function changeColor() {
-            if(document.body.style.backgroundColor === "lightblue")
-            {
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click", function () {
+            if (document.body.style.backgroundColor === "lightblue") {
                 document.body.style.backgroundColor = "white";
-            }
-            else {
+            } else {
                 document.body.style.backgroundColor = "lightblue";
             }
-        }
+        });
     </script>
 
 </body>
+
 </html>

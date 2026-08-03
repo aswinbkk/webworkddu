@@ -1,102 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Web</title>
-    <style>
-      body
-      {
-        margin: 0;
-        font-family: sans-serif;
-      }
-      
-      .navbar
-      { 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 30px;
-        background-color: #333;
-        color: white; 
-      }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple Website</title>
 
-      .navlinks a
-      {
-        color: white;
-        text-decoration: none;
-        margin: 0 15px;
-      }
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
 
-      .connect_btn
-      {
-        border-radius: 20px;
-        padding: 8px 15px;
-        cursor: pointer;
-      }
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+		}
 
-      .hero
-      {
-        height: 100vh;
-        background: url(home_1.jpg) center/cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-align: center;
-      }
+		.navbar {
+			background: #222;
+			color: white;
 
-      .hero h1
-      {
-        font-size: 4rem;
-        margin-bottom: 10px;
-      }
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
 
-      .hero p
-      {
-        font-size: 1.5rem;
-      }
+			padding: 15px 40px;
+		}
 
-      .footer
-      {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        padding: 20px 30px;
-        background-color: #222;
-        color: white;
-        min-height: 100px;
-      }
+		.logo {
+			font-size: 1.5rem;
+			font-weight: bold;
+		}
 
-      .footer a 
-      { 
-        color: #4DA8DA;
-        text-decoration: none; }
-    </style>
-    
+		.navlinks {
+			display: flex;
+			gap: 25px;
+		}
+
+		.navlinks a {
+			color: white;
+			text-decoration: none;
+			transition: .3s;
+		}
+
+		.navlinks a:hover {
+			color: #00bfff;
+		}
+
+		.connect_btn {
+			padding: 10px 20px;
+			border: none;
+			border-radius: 20px;
+			cursor: pointer;
+			background: #00bfff;
+			color: white;
+			transition: .3s;
+		}
+
+		.connect_btn:hover {
+			background: #0095cc;
+		}
+
+		.hero {
+			height: calc(100vh - 70px);
+
+			background:
+				linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)),
+				url("cover_image.jpg") center/cover no-repeat;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			text-align: center;
+			color: white;
+			padding: 20px;
+		}
+
+		.hero h1 {
+			font-size: 4rem;
+			margin-bottom: 20px;
+		}
+
+		.hero p {
+			max-width: 700px;
+			font-size: 1.3rem;
+			line-height: 1.6;
+			margin-bottom: 30px;
+		}
+
+		.hero button {
+			padding: 12px 28px;
+			border: none;
+			border-radius: 5px;
+			background: #00bfff;
+			color: white;
+			cursor: pointer;
+			transition: .3s;
+		}
+
+		.hero button:hover {
+			background: #0095cc;
+		}
+
+		.footer {
+			background: #222;
+			color: white;
+
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			padding: 20px 40px;
+		}
+
+		.footer a {
+			color: #00bfff;
+			text-decoration: none;
+		}
+
+		.footer a:hover {
+			text-decoration: underline;
+		}
+	</style>
 </head>
+
 <body>
 
-  <nav class="navbar">
-    <div class="logo">MyLogo</div>
-    <div class="navlinks">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-    </div>
-    <button class="connect_btn">Connect</button>
-  </nav>
+	<nav class="navbar">
+		<div class="logo">MyLogo</div>
 
-  <header class="hero">
-    <h1>Main Title</h1>
-    <p>Hero section description.</p>
-  </header>
+		<div class="navlinks">
+			<a href="#">Home</a>
+			<a href="#">About</a>
+			<a href="#">Services</a>
+		</div>
 
-  <footer class="footer">
-    <div class="logo-bottom">MyLogo</div>
-    <a href="#">Contact Us</a>
-  </footer>
+		<button class="connect_btn">Connect</button>
+	</nav>
+
+	<section class="hero">
+		<h1>My Website</h1>
+
+		<p>
+			Description: cover_image, cover_image,
+			cover_image, cover_image, cover_image,
+			cover_image, cover_image.
+		</p>
+
+		<button>Get Started</button>
+	</section>
+
+	<footer class="footer">
+		<div>© 2026 MyLogo</div>
+		<a href="#">Contact Us</a>
+	</footer>
 
 </body>
+
 </html>

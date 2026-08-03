@@ -1,9 +1,9 @@
-import Home from "./page/Home"
+import Form from "./page/Form"
 
 const App = () => {
   return (
     <>
-    <Home/>
+    <Form/>
     </>
   )
 }
